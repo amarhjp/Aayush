@@ -1,0 +1,19 @@
+---
+- name: Delete Specific Release Branch Version
+  hosts: localhost
+  connection: local
+  vars:
+    github_token: "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"
+    repo_owner: "amarhjp"
+    repo_name: "Aayush"
+    branch_to_delete: "release-v1.1"  # 👈 Specify the version branch name here
+
+  tasks:
+    - name: Delete the targeted branch reference from GitHub
+      ansible.builtin.uri:
+        url: "https://api.github.com/repos/{{ repo_owner }}/{{ repo_name }}/git/refs/heads/{{ branch_to_delete }}"
+        method: DELETE
+        headers:
+          Authorization: "Bearer {{ github_token }}"
+          Accept: "application/vnd.github+json"
+        status_code: [204, 422]   # 👈 GitHub API returns 204 No Content upon successful deletion
