@@ -1,1 +1,199 @@
-<h1 style="font-size: 48px; text-align: center; font-family: sans-serif; color: #4A90E2; margin-top: 10%;">Hello World!we are happy family, my darling Rinki, Aayush and Sambhavi!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Family</title>
+    <style>
+        /* Base Setup & Colors */
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent: #4f46e5;
+            --accent-light: #e0e7ff;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Container Layout */
+        .family-container {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Header Styling */
+        .family-header {
+            margin-bottom: 50px;
+        }
+
+        .family-header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .family-header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* The Grid System */
+        .grid-parents, .grid-babies {
+            display: grid;
+            gap: 25px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .grid-parents {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .grid-babies {
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Section Headings */
+        .section-title {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin: 40px 0 20px 0;
+            position: relative;
+            font-weight: 600;
+        }
+
+        /* Profile Card Styling */
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px 20px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Avatar System */
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: var(--accent-light);
+            color: var(--accent);
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            margin: 0 0 5px 0;
+        }
+
+        .role-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: var(--accent-light);
+            color: var(--accent);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="family-container">
+        
+        <!-- Main Header -->
+        <div class="family-header">
+            <h1>Welcome To Our Home</h1>
+            <p>Every family has a story to tell, welcome to ours!</p>
+        </div>
+
+        <!-- Parents Section -->
+        <div class="section-title">Parents</div>
+        <div class="grid-parents">
+            
+            <!-- Amar -->
+            <div class="card">
+                <div class="avatar">A</div>
+                <h2>Amar</h2>
+                <div class="role-tag">Father / Husband</div>
+                <p>Guiding our beautiful family with love, strength, and continuous dedication.</p>
+            </div>
+
+            <!-- Rinki -->
+            <div class="card">
+                <div class="avatar">R</div>
+                <h2>Rinki</h2>
+                <div class="role-tag">Mother / Wife</div>
+                <p>The core heart and soul of our home, bringing warmth and infinite care daily.</p>
+            </div>
+
+        </div>
+
+        <!-- Children Section -->
+        <div class="section-title">Our Little Wonders</div>
+        <div class="grid-babies">
+            
+            <!-- Aaayush -->
+            <div class="card">
+                <div class="avatar">A</div>
+                <h2>Aaayush</h2>
+                <div class="role-tag">Son / Big Brother</div>
+                <p>Full of boundless energy, bright ideas, and bringing pure laughter to everyone.</p>
+            </div>
+
+            <!-- Sambhavi -->
+            <div class="card">
+                <div class="avatar">S</div>
+                <h2>Sambhavi</h2>
+                <div class="role-tag">Daughter / Little Sister</div>
+                <p>Our little ray of sunshine, filling our days with sweetness and joy.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+
